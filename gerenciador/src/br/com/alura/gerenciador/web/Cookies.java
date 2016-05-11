@@ -4,7 +4,7 @@ import javax.servlet.http.Cookie;
 
 public class Cookies {
 
-	private final Cookie[] cookies;
+private final Cookie[] cookies;
 	
 	public Cookies(Cookie[] cookies) {
 		this.cookies = cookies;
@@ -21,5 +21,5 @@ public class Cookies {
    		}
    		return null;
 	}
-	
+
 }

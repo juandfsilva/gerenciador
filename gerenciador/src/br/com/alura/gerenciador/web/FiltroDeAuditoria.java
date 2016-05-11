@@ -11,9 +11,12 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
-@WebFilter(urlPatterns="/*")
-public class FiltroDeAuditoria implements Filter{
+import br.com.alura.gerenciador.Usuario;
+
+@WebFilter(urlPatterns = "/*")
+public class FiltroDeAuditoria implements Filter {
 
 	@Override
 	public void destroy() {
@@ -50,5 +53,4 @@ public class FiltroDeAuditoria implements Filter{
 		// TODO Auto-generated method stub
 		
 	}
-
 }

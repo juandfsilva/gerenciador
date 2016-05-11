@@ -11,11 +11,12 @@ public class UsuarioDAO {
 	static {
 		USUARIOS.put("guilherme.silveira@alura.com.br", new Usuario("guilherme.silveira@alura.com.br","silveira"));
 		USUARIOS.put("rodrigo.turini@alura.com.br", new Usuario("rodrigo.turini@alura.com.br","turini"));
+		USUARIOS.put("teste", new Usuario("teste","123"));
 	}
 
 	public Usuario buscaPorEmailESenha(String email, String senha) {
 		if (!USUARIOS.containsKey(email))
-			return null;
+		return null;
 
 		Usuario usuario = USUARIOS.get(email);
 		if (usuario.getSenha().equals(senha))
