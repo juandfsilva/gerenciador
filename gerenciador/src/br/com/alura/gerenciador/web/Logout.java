@@ -14,16 +14,13 @@ import javax.servlet.http.HttpSession;
 
 import jdk.nashorn.internal.ir.RuntimeNode.Request;
 
-@WebServlet(urlPatterns = "/logout")
-public class Logout extends HttpServlet{
+public class Logout implements Terefa{
+
+	
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
-		PrintWriter writer = resp.getWriter();
-		
-		req.getSession().removeAttribute("usuario.logado");;	
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/paginas/logout.html");
-		dispatcher.forward(req, resp);
+	public String executa(HttpServletRequest req, HttpServletResponse resp) {
+		req.getSession().removeAttribute("usuarioLogado");;	
+		return "/WEB-INF/paginas/logout.html";
 	}
 }

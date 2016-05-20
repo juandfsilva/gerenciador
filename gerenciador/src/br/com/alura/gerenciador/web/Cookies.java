@@ -15,7 +15,7 @@ private final Cookie[] cookies;
    	
    		if (cookies == null) return null;
    		for (Cookie cookie : cookies) {
-   			if (cookie.getName().equals("usuario.logado")) {
+   			if (cookie.getName().equals("usuarioLogado")) {
    				return cookie;
    			}
    		}
